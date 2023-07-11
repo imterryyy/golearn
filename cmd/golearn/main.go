@@ -7,14 +7,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var rootCmd = *&cobra.Command{
+var rootCmd = &cobra.Command{
         Use: "golearn",
         Short: "Golearn is learn program to learn golang from scratch",
-        Run: runApp,
-}
-
-func runApp(cmd *cobra.Command, args [] string) {
-        fmt.Println("Hello world from Golearn")
+        Long: "Golearn is learn program to learn golang from scratch",
 }
 
 func Execute() {
@@ -23,3 +19,5 @@ func Execute() {
                 os.Exit(1)
         }
 }
+
+func init() {}
