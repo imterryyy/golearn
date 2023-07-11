@@ -1,9 +1,9 @@
 package main
 
 import (
-        "github.com/terryyyz/golearn/cmd/golearn"
+        "github.com/terryyyz/golearn/cmd"
 )
 
 func main() {
-        golearn.Execute();
+        cmd.Execute();
 }
