@@ -5,24 +5,17 @@ import (
 	"time"
 )
 
-func testGoroutine(goroutineName string) {
-        fmt.Println(goroutineName)
-}
-
 func RunChannel() {
         fmt.Println("Start channel")
         chan1 := make(chan string)
 
-        // send data to channel
+        // use goroutine to send data to chan1
         go func() {
                 chan1 <- "Terry"
         }()
 
-        // receive data from channel
+        // main goroutine receive data from chan1
         fmt.Println(<-chan1)
-
-        go testGoroutine("second goroutine")
-        testGoroutine("main goroutine")
 
         time.Sleep(time.Second)
 }
