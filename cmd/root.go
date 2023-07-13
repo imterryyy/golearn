@@ -17,6 +17,8 @@ func Execute() {
         rootCmd.AddCommand(helloWorldCmd)
         rootCmd.AddCommand(channelCmd)
         rootCmd.AddCommand(workerCmd)
+        rootCmd.AddCommand(listenerCmd)
+        rootCmd.AddCommand(rpcHandlerCmd)
         if err := rootCmd.Execute(); err != nil {
                 fmt.Println(err)
                 os.Exit(1)
